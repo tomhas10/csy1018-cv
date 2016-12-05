@@ -5,37 +5,41 @@ display: flex;
 justify-content: space-between;
 /* align-self: center;*/
  flex-direction: row;
- margin: -10px -10px -10px -10px;
+ margin: -10px -10px 0px -10px;
 background-color: gray;
-
-height: 5%;
+border-bottom-color: rgba(0, 0, 0, 0.5);
+border-bottom-style: outset;
+height: 2em;
   text-align: center;
   text-transform: uppercase;
--webkit-transition: all 0.5s;
-transition: all 0.5s;
+z-index: 5;
 }
+
 .nav-item-list
 {
   display: flex;
 justify-content: flex-end;
 flex-direction: row;
 
-
+z-index: 5;
 }
 .nav-bar-name{
   font-family: 'Audiowide', cursive;
   font-size: 1.5em;
   text-align: left;
   -webkit-transition: 2s;
+  color:white;
   transition: 2s;
 /*justify-content: flex-start;*/
+
+z-index: 5;
 order: -1;
 }
 .nav-bar-name:hover{
  color: blue;
 }
 .nav-item{
-
+z-index: 5;
   display: flex;
   /*align-self: center;
   justify-content: center;
@@ -45,37 +49,79 @@ order: -1;
   width: 300%;
   flex-flow: wrap;
   height: 100%;
+
 padding: 0;
   background-color: gray;
 
-    -webkit-transition: 2s;
-    transition: 2s;
+
 }
 
 .nav-item a{
+  z-index: 5;
   -webkit-transition: 0.5s;
 padding: 0px 10px;
   transition: 0.5s;
 
   text-decoration: none;
+  color: white;
 }
 
 .nav-item a:hover{
 
 background-color:red;
 }
-@media (min-width:300px) {
-  .nav-bar{
-    height: 5%;
-  }
+.page-head
+{
+
+  display: flex;
+  align-items: flex-end;
+  margin: 0px -10px -10px -10px;
+  height: 7em;
+  background-color: rgba(212,212,212,0.5);
+   border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-bottom-style: outset;
+}
+.page-head-name
+{
+  z-index: 4;
+font-size: 5em;
+  font-family: 'Audiowide', cursive;
+margin: -10px -10px -25px 0px;
+-webkit-animation: page-name-sprint 1s 1;
+animation:page-name-sprint 5s 1;
 }
 
-@media (min-width:600px) {
+@media (max-width:600px) {
   .nav-bar{
     height: 4em;
 
   }
+@media (max-width:300px) {
+  .nav-bar{
+    height: 6em;
+
+  }
     .nav-bar-name{
-      font-size: 2em;
+      /*font-size: 2em;*/
     }
+}
+p{
+  animation: namemove 5s 1;
+}
+@keyframes namemove {
+  @-webkit-keyframes page-name-sprint {
+    0%{
+      translateX(-100px);
+    }
+    100%{
+      translateX(0px);
+    }
+}
+@-webkit-keyframes page-name-sprint {
+  0%{
+    translateX(-100px);
+  }
+  100%{
+    translateX(0px);
+  }
 }
