@@ -81,7 +81,7 @@ background-color:red;
   background-color: rgba(212,212,212,0.5);
   border-bottom-color: rgba(0, 0, 0, 0.5);
   border-bottom-style: outset;
-  animation: head-ani 1s 1;
+  animation: head-ani ease 1s 1;
 }
 .page-head-name
 {
@@ -90,8 +90,8 @@ background-color:red;
 font-size: 5em;
   font-family: 'Audiowide', cursive;
 margin: -10px -10px -25px 0px;
--webkit-animation:namemove 1s 1;
-animation:namemove 1s 1;
+
+animation:namemove ease 1s 1;
 }
 @keyframes nav-ani {
       0%{
