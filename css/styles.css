@@ -1,3 +1,4 @@
+
 .nav-bar
 {
 display: flex;
@@ -6,9 +7,7 @@ justify-content: space-between;
 /* align-self: center;*/
  flex-direction: row;
  margin: -10px -10px 0px -10px;
-background-color: gray;
-border-bottom-color: rgba(0, 0, 0, 0.5);
-border-bottom-style: outset;
+background: #0097A7;
 height: 2em;
   text-align: center;
   text-transform: uppercase;
@@ -29,7 +28,7 @@ z-index: 5;
   font-size: 1.5em;
   text-align: left;
   -webkit-transition: 2s;
-  color:white;
+  color:#ffffff;
   transition: 2s;
 /*justify-content: flex-start;*/
 
@@ -47,12 +46,13 @@ z-index: 5;
 */  font-family: 'Squada One', cursive;
   text-align: center;
   font-size: 2em;
+color:#B2EBF2;
   width: 300%;
   flex-flow: wrap;
   height: 100%;
 
 padding: 0;
-  background-color: gray;
+  background: #0097A7;
 
 
 }
@@ -64,7 +64,7 @@ padding: 0px 10px;
   transition: 0.5s;
 
   text-decoration: none;
-  color: white;
+  color:#FFFFFF;
 }
 
 .nav-item a:hover{
@@ -78,7 +78,7 @@ background-color:red;
   align-items: flex-end;
   margin: 0px -10px -10px -10px;
   height: 7em;
-  background-color: rgba(212,212,212,0.5);
+background: #B2EBF2;
   border-bottom-color: rgba(0, 0, 0, 0.5);
   border-bottom-style: outset;
   animation: head-ani ease 1s 1;
@@ -92,6 +92,10 @@ font-size: 5em;
 margin: -10px -10px -25px 0px;
 
 animation:namemove ease 1s 1;
+}
+body{
+  background: rgba(0,0,0,-0.5) url('../img/background.png');
+
 }
 @keyframes nav-ani {
       0%{
