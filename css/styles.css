@@ -93,9 +93,39 @@ margin: -10px -10px -25px 0px;
 
 animation:namemove ease 1s 1;
 }
-body{
+.home-head{
+  display: flex;
+  align-items: flex-end;
+  margin: 0px -10px -10px -10px;
+  height: 10em;
   background: rgba(0,0,0,-0.5) url('../img/background.png');
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-bottom-style: outset;
+  animation: head-ani ease 1s 1;
 
+
+}
+.home-head-name{
+  z-index: 4;
+font-size: 1.5em;
+  font-family: 'Audiowide', cursive;
+margin: -10px -10px -25px 0px;
+
+animation:namemove ease 1s 1;
+}
+form{
+  /*
+  Form code partly borrowed from http://codepen.io/UoN-ThomasRose/pen/NbYrGjs
+  */
+  border: solid black 2px;
+  padding: 1em;
+  width: 40%;
+  min-width: 15em;
+  max-width: 40em;
+}
+textarea {
+  width: 96%;
+  resize: none;
 }
 @keyframes nav-ani {
       0%{
