@@ -9,7 +9,7 @@ width:100%;
 height:100%;
 */
 }
-html, p{
+ p{
   font-size: 1.2em;
 }
 html, h4{
@@ -55,13 +55,9 @@ justify-content: space-between;
   text-align: left;
   align-self: center;
   color:#ffffff;
-  transition: 2s;
   /*justify-content: flex-start;*/
   z-index: 5;
   order: 0;
-}
-.nav-bar-name:hover{
-   color: blue;
 }
 .nav-item{
   z-index: 5;
@@ -121,7 +117,7 @@ height: 100%;
   display:flex;
 margin: 23px -10px 0px -10px;
 background: url('../img/home-back.png');
-
+background-size: cover;
 
 
 }
@@ -241,9 +237,12 @@ textarea {
     height: 6em;
 
   }
-@media (max-width:400px) {
+@media (max-width:500px) {
   .nav-bar{
     height: 8em;
 
+  }
+  .nav-item{
+    font-size: 1em;
   }
 }
