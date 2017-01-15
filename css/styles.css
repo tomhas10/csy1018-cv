@@ -1,5 +1,5 @@
 /*Header formatting*/
-body{
+html, body{
   font-family: 'Roboto', sans-serif;
 
   /*Andres Ilich(2011). Creating 3 Perfectly Equal Columns that take up 100% on the Browser Window Width. Stackoverflow.com. Retrieved 13 January 2017, from http://stackoverflow.com/questions/7591343/creating-3-perfectly-equal-columns-that-take-up-100-on-the-browser-window-width*/
@@ -9,10 +9,10 @@ width:100%;
 height:100%;
 */
 }
-p{
+html, p{
   font-size: 1.2em;
 }
-h4{
+html, h4{
   font-size: 1.5em;
 }
 
@@ -199,7 +199,7 @@ form{
   /*
   Form code partly borrowed from http://codepen.io/UoN-ThomasRose/pen/NbYrGjs
   */
-
+  
 
   border: solid black 2px;
   padding: 1em;
@@ -213,6 +213,7 @@ textarea {
 }
 .contact-body{
   padding-top: 10px;
+  text-align: center;
 }
 .form-container{
   display: flex;
