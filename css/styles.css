@@ -53,7 +53,6 @@ justify-content: space-between;
   font-family: 'Audiowide', cursive;
   font-size: 1.5em;
   text-align: left;
-  -webkit-transition: 2s;
   align-self: center;
   color:#ffffff;
   transition: 2s;
@@ -84,7 +83,6 @@ justify-content: space-between;
 
 .nav-item a{
   z-index: 5;
-  -webkit-transition: 0.5s;
   padding: 0px 10px;
   align-items: center;
   transition: 0.5s;
@@ -122,7 +120,7 @@ height: 100%;
 
   display:flex;
 margin: 23px -10px 0px -10px;
-background: rgba(0,0,0,-0.5) url('../img/home-back.png');
+background: url('../img/home-back.png');
 
 
 
