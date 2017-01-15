@@ -232,7 +232,7 @@ textarea {
       transform: translateX(0px);
     }
 }
-@media (max-width:500px) {
+@media (max-width:650px) {
   .nav-bar{
     height: 8em;
 
@@ -240,10 +240,3 @@ textarea {
   .nav-item{
     font-size: 1em;
   }
-@media (max-width:730px) {
-  .nav-bar{
-    height: 6em;
-
-  }
-
-}
