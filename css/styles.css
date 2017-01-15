@@ -1,122 +1,206 @@
+/*Header formatting*/
+body{
+  font-family: 'Roboto', sans-serif;
+
+  /*Andres Ilich(2011). Creating 3 Perfectly Equal Columns that take up 100% on the Browser Window Width. Stackoverflow.com. Retrieved 13 January 2017, from http://stackoverflow.com/questions/7591343/creating-3-perfectly-equal-columns-that-take-up-100-on-the-browser-window-width*/
+/*margin:0;
+padding:0;
+width:100%;
+height:100%;
+*/
+}
+p{
+  font-size: 1.2em;
+}
+h4{
+  font-size: 1.5em;
+}
 
 .nav-bar
 {
-display: flex;
+  display: flex;
 
 justify-content: space-between;
-/* align-self: center;*/
- flex-direction: row;
- margin: -10px -10px 0px -10px;
-background: #0097A7;
-height: 2em;
+  /* align-self: center;*/
+  flex-direction: row;
+  margin: -8px -8px 0px -8px;
+  background: #0097A7;
+  height: 4.1em;
+  align-content: center;
   text-align: center;
   text-transform: uppercase;
-z-index: 5;
-animation: nav-ani 1s 1;
+  z-index: 5;
+  animation: nav-ani 1s 1;
 }
 
 .nav-item-list
 {
   display: flex;
-justify-content: flex-end;
-flex-direction: row;
-
-z-index: 5;
+  justify-content: flex-end;
+  flex-direction: row;
+  z-index: 5;
+}
+.nav-bar-logo{
+  height: 100%;
+  justify-content: flex-start;
+  order: -1;
+    transition: 2s;
+}
+.nav-bar-logo:hover{
+  transform: rotateY(360deg);
 }
 .nav-bar-name{
   font-family: 'Audiowide', cursive;
   font-size: 1.5em;
   text-align: left;
   -webkit-transition: 2s;
+  align-self: center;
   color:#ffffff;
   transition: 2s;
-/*justify-content: flex-start;*/
-
-z-index: 5;
-order: -1;
+  /*justify-content: flex-start;*/
+  z-index: 5;
+  order: 0;
 }
 .nav-bar-name:hover{
- color: blue;
+   color: blue;
 }
 .nav-item{
-z-index: 5;
+  z-index: 5;
   display: flex;
   /*align-self: center;
-  justify-content: center;
-*/  font-family: 'Squada One', cursive;
+  justify-content: center;*/
+  font-family: 'Squada One', cursive;
   text-align: center;
   font-size: 2em;
-color:#B2EBF2;
+  color:#B2EBF2;
   width: 300%;
   flex-flow: wrap;
   height: 100%;
-
-padding: 0;
+  padding: 0;
   background: #0097A7;
-
+  align-self: center;
 
 }
 
 .nav-item a{
   z-index: 5;
   -webkit-transition: 0.5s;
-padding: 0px 10px;
+  padding: 0px 10px;
+  align-items: center;
   transition: 0.5s;
-
   text-decoration: none;
   color:#FFFFFF;
 }
 
 .nav-item a:hover{
-
-background-color:red;
+  background-color:red;
 }
-
+/* Part below nav bar, includes page title*/
 .page-head
 {
   display: flex;
   align-items: flex-end;
-  margin: 0px -10px -10px -10px;
+  margin: 0px -10px -23px -10px;
   height: 7em;
-background: #B2EBF2;
+  background: #B2EBF2;
   border-bottom-color: rgba(0, 0, 0, 0.5);
   border-bottom-style: outset;
   animation: head-ani ease 1s 1;
 }
 .page-head-name
 {
-
   z-index: 4;
-font-size: 5em;
+  font-size: 5em;
   font-family: 'Audiowide', cursive;
-margin: -10px -10px -25px 0px;
-
-animation:namemove ease 1s 1;
+  margin: -10px -10px -25px 0px;
+  animation:namemove ease 1s 1;
 }
-.home-head{
+
+.home-nav{
+height: 100%;
+
+
+  display:flex;
+margin: 23px -10px 0px -10px;
+background: rgba(0,0,0,-0.5) url('../img/home-back.png');
+
+
+
+}
+.home-nav a{
+
+
+  width: 40%;
+    text-decoration: none;
+  text-align: center;
+/*algi. (2012). How to outline text in HTML / CSS. [online] Stackoverflow.com. Available at: http://stackoverflow.com/questions/11323813/how-to-outline-text-in-html-css [Accessed 10 Jan. 2017].*/
+  text-shadow: 2px 2px 0px #FFFFFF; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+
+transition: 1s;
+}
+.home-nav a:hover{
+background-color: rgba(255, 0, 0, 0.5);
+}
+
+.home-nav-about{
+
+
+height: 100%;
+
+}
+.home-nav p{
+
+  /*CSS Layout - Horizontal & Vertical Align. (2017). W3schools.com. Retrieved 13 January 2017, from http://www.w3schools.com/css/css_align.asp*/
+  padding: 70% 0;
+    font-family: 'Squada One', cursive;
+    font-size: 3em;
+    color: rgb(0,0,0);
+
+
+}
+
+.home-nav-cv{
+
+  height: 100%;
+  /*top, right, down, left*/
+
+}
+
+.home-nav-contact{
+
+height: 100%;
+}
+.cv{
+  text-align: center;
+  padding-top: 1em;
+}
+.cv-list{
   display: flex;
-  align-items: flex-end;
-  margin: 0px -10px -10px -10px;
-  height: 10em;
-  background: rgba(0,0,0,-0.5) url('../img/background.png');
-  border-bottom-color: rgba(0, 0, 0, 0.5);
-  border-bottom-style: outset;
-  animation: head-ani ease 1s 1;
-
+  flex-direction: row;
+  justify-content: space-around;
+}
+.bio-top{
+  display: flex;
+  flex-direction: row;
+}
+.bio-bottom{
+    display: flex;
+    flex-direction: row;
+}
+.bio-section img{
+padding-top: 23px;
 
 }
-.home-head-name{
-  z-index: 4;
-font-size: 1.5em;
-  font-family: 'Audiowide', cursive;
-margin: -10px -10px -25px 0px;
-
-animation:namemove ease 1s 1;
+li{
+  font-size: 1.2em;
 }
+
 form{
   /*
   Form code partly borrowed from http://codepen.io/UoN-ThomasRose/pen/NbYrGjs
   */
+
+
   border: solid black 2px;
   padding: 1em;
   width: 40%;
@@ -127,6 +211,14 @@ textarea {
   width: 96%;
   resize: none;
 }
+.contact-body{
+  padding-top: 10px;
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+}
+/*animations*/
 @keyframes nav-ani {
       0%{
         transform: translateY(-100px);
@@ -145,14 +237,14 @@ textarea {
       transform: translateX(0px);
     }
 }
-@media (max-width:600px) {
-  .nav-bar{
-    height: 4em;
-
-  }
-@media (max-width:300px) {
+@media (max-width:730px) {
   .nav-bar{
     height: 6em;
+
+  }
+@media (max-width:400px) {
+  .nav-bar{
+    height: 8em;
 
   }
     .nav-bar-name{
