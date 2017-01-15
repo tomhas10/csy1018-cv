@@ -1,38 +1,35 @@
-/*Header formatting*/
-html, body{
-  font-family: 'Roboto', sans-serif;
 
-  /*Andres Ilich(2011). Creating 3 Perfectly Equal Columns that take up 100% on the Browser Window Width. Stackoverflow.com. Retrieved 13 January 2017, from http://stackoverflow.com/questions/7591343/creating-3-perfectly-equal-columns-that-take-up-100-on-the-browser-window-width*/
-/*margin:0;
-padding:0;
-width:100%;
-height:100%;
-*/
+html, body{
+  /*Defaults fonts to Roboto*/
+  font-family: 'Roboto', sans-serif;
 }
- p{
+html, p{
+  /*Defaults paragraph font sizes*/
   font-size: 1.2em;
 }
 html, h4{
   font-size: 1.5em;
 }
 
+/* container for all navigation bar code*/
 .nav-bar
 {
   display: flex;
-
-justify-content: space-between;
-  /* align-self: center;*/
+  justify-content: space-between;
   flex-direction: row;
+  /*removes blank space around nav bar*/
   margin: -8px -8px 0px -8px;
   background: #0097A7;
   height: 4.1em;
   align-content: center;
   text-align: center;
   text-transform: uppercase;
+  /*z-index from W3schools.com. (2017). CSS z-index property. [online] Available at: http://www.w3schools.com/cssref/pr_pos_z-index.asp [Accessed 2 Jan. 2017].*/
+  /* z-index sets the order it'll appear on screen. Higher numbers appear on top*/
   z-index: 5;
   animation: nav-ani 1s 1;
 }
-
+/*Container for nav bar links*/
 .nav-item-list
 {
   display: flex;
@@ -55,15 +52,13 @@ justify-content: space-between;
   text-align: left;
   align-self: center;
   color:#ffffff;
-  /*justify-content: flex-start;*/
   z-index: 5;
   order: 0;
 }
+/*each nav bar link is linked to this.*/
 .nav-item{
   z-index: 5;
   display: flex;
-  /*align-self: center;
-  justify-content: center;*/
   font-family: 'Squada One', cursive;
   text-align: center;
   font-size: 2em;
@@ -82,10 +77,12 @@ justify-content: space-between;
   padding: 0px 10px;
   align-items: center;
   transition: 0.5s;
+  /* text decoration from Mozilla Developer Network. (2016). text-decoration. [online] Available at: https://developer.mozilla.org/en/docs/Web/CSS/text-decoration [Accessed 15 Jan. 2017].*/
+  /*disables colored text when used as a hyperlink*/
   text-decoration: none;
   color:#FFFFFF;
 }
-
+/*used when user hovers over nav bar item*/
 .nav-item a:hover{
   background-color:red;
 }
@@ -99,7 +96,6 @@ justify-content: space-between;
   background: #B2EBF2;
   border-bottom-color: rgba(0, 0, 0, 0.5);
   border-bottom-style: outset;
-  animation: head-ani ease 1s 1;
 }
 .page-head-name
 {
@@ -109,14 +105,13 @@ justify-content: space-between;
   margin: -10px -10px -25px 0px;
   animation:namemove ease 1s 1;
 }
-
+/*container for the home-page navigation menu*/
 .home-nav{
 height: 100%;
-
-
-  display:flex;
+display:flex;
 margin: 23px -10px 0px -10px;
 background: url('../img/home-back.png');
+/* makes the background image fill the container*/
 background-size: cover;
 
 
@@ -125,7 +120,7 @@ background-size: cover;
 
 
   width: 40%;
-    text-decoration: none;
+  text-decoration: none;
   text-align: center;
 /*algi. (2012). How to outline text in HTML / CSS. [online] Stackoverflow.com. Available at: http://stackoverflow.com/questions/11323813/how-to-outline-text-in-html-css [Accessed 10 Jan. 2017].*/
   text-shadow: 2px 2px 0px #FFFFFF; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
@@ -136,12 +131,7 @@ transition: 1s;
 background-color: rgba(255, 0, 0, 0.5);
 }
 
-.home-nav-about{
 
-
-height: 100%;
-
-}
 .home-nav p{
 
   /*CSS Layout - Horizontal & Vertical Align. (2017). W3schools.com. Retrieved 13 January 2017, from http://www.w3schools.com/css/css_align.asp*/
@@ -152,7 +142,9 @@ height: 100%;
 
 
 }
-
+.home-nav-about{
+height: 100%;
+}
 .home-nav-cv{
 
   height: 100%;
@@ -193,8 +185,6 @@ form{
   /*
   Form code borrowed from http://codepen.io/UoN-ThomasRose/pen/NbYrGjs
   */
-
-
   border: solid black 2px;
   padding: 1em;
   width: 40%;
@@ -214,6 +204,8 @@ textarea {
   justify-content: center;
 }
 /*animations*/
+/*these are used for when the page loads*/
+/*nav bar animation*/
 @keyframes nav-ani {
       0%{
         transform: translateY(-100px);
@@ -223,7 +215,7 @@ textarea {
       }
 
 }
-
+/*page name animation*/
 @keyframes namemove {
     0%{
       transform: translateX(-300px);
@@ -232,6 +224,7 @@ textarea {
       transform: translateX(0px);
     }
 }
+/*resizes nav bar on smaller screens*/
 @media (max-width:650px) {
   .nav-bar{
     height: 8em;
